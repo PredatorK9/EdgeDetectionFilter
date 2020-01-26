@@ -44,8 +44,8 @@ def greyscaleImage(image, w, h):
     grey_image = np.zeros([w, h, 3])
 
     # greyscaling the image
-    for i in range(w-1):
-        for j in range(h-1):
+    for i in range(w):
+        for j in range(h):
 
             # the luminous greyscaling is:
             # 0.3 * R + 0.59 * G + 0.11 * B
@@ -89,8 +89,8 @@ def truncateIntesity(new_image, w, h):
 
     # to make sure that the pixel values doesn't break the limits
     # we are truncating the values
-    for i in range(w-1):
-        for j in range(h-1):
+    for i in range(w):
+        for j in range(h):
             for z in range(3):
                 if(new_image[i][j][z] < 0):
                     new_image[i][j][z] = 0
