@@ -71,6 +71,8 @@ def detectEdges(image, w, h):
     new_image =  np.zeros([w, h, 3])
 
     # performing convolution with our kernel over the image
+    # the whole process is written in a way for the person to understand how convolution works
+    # the process below can be performed by a single function call i.e. np.convolve()
     for i in range (w-3):
         for j in range (h-3):
             new_image[i+1][j+1] = (kernel[0][0] * image[i+1][j+1] + kernel[0][1] * image[i+1][j+2] + kernel[0][2] * image[i+1][j+3] +
